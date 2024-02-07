@@ -1,8 +1,18 @@
 class Carro():
-    placa = "SDF 456"
-    tipo_vehiculo = "Camion"
-    
+    #metodo construtor 
+    def __init__(self, placa , tipo_vehiculo):
+        self.placa = placa 
+        self.tipo_vehiculo = tipo_vehiculo
 class Cliente():
-    nombre = "Maicol Vega"
-    celular = 32342423
-    identificacion = 232424335
+    def __init__(self, nombre, documento, celular, lista_carros):
+        self.nombre = nombre
+        self.documento = documento
+        self.celular = celular 
+        self.lista_carros = lista_carros
+        
+    def addCar(self, car):
+        self.lista_carros.append(car)
+
+    def listCar(self):
+        for i in self.lista_carros:
+            print("carro con placa: " + i.placa)
