@@ -43,6 +43,8 @@ class Pago():
         self.empleado = empleado
               
 class Empleado():
-    def __init__(nombre,
+    def __init__(self,nombre,
                  codigo):
+        self.nombre = nombre
+        self.codigo = nombre
                    
